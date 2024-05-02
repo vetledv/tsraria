@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint": "biome check --apply ./src",
+    "quickfix": "biome check --apply ./src",
+    "clean": "git clean -fdx node_modules dist"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.31.6",
@@ -22,5 +25,8 @@
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  }
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }
